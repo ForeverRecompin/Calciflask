@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block title %} Calciflask | Division {% endblock %}
+
+{% block body %}
+{{ super() }}
+<div class="container">
+  {% for x in range(1,11) %}
+    <p>[{{ "#"*x }}] {{ "..." + x|string + "0%" }}</p>
+  {% endfor %}
+  <p><h1></h1></p>
+  <p><h1>Looks like we're done. Kudos!</h1></p>
+  <p><h2><code>{{ num1 }} / {{ num2 }} = {{ num1/num2 }}</code></h2></p>
+</div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %} Calciflask | Home {% endblock %}
+
+{% block content %}
+{{ super() }}
+<div class="container">
+  <p>
+    <ul>
+      <li><h2>Addition: <a href="localhost:5000/add/{{ num1 }}/{{ num2 }}">localhost:5000/add/{{ num1 }}/{{ num2 }}</a></h2></li>
+      <li><h2>Subtraction: <a href="localhost:5000/sub/{{ num1 }}/{{ num2 }}">localhost:5000/sub/{{ num1 }}/{{ num2 }}</a></h2></li>
+      <li><h2>Multiplication: <a href="localhost:5000/mult/{{ num1 }}/{{ num2 }}">localhost:5000/mult/{{ num1 }}/{{ num2 }}</a></h2></li>
+      <li><h2>Division: <a href="localhost:5000/div/{{ num1 }}/{{ num2 }}">localhost:5000/div/{{ num1 }}/{{ num2 }}</a></h2></li>
+    </ul>
+  </p>
+  <p>
+    <h2> Feel free to replace {{ num1 }}, {{ num2 }} with integers and/or floats you crave(<small> In the address bar</small>). </h2>
+    <hr>
+  </p>
+</div>
+{% endblock %}
