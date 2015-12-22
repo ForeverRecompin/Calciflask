@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
 
-{% block title %} Calciflask | Subtraction {% endblock %}
+{% block title %} Calciflask | {{ title_desc }} {% endblock %}
 
 {% block content %}
 {{ super() }}
@@ -10,6 +10,6 @@
   {% endfor %}
   <p><h1></h1></p>
   <p><h1>Looks like we're done. Kudos!</h1></p>
-  <p><h2><code>{{ num1 }} - {{ num2 }} = {{ num1-num2 }}</code></h2></p>
+  <p><h2><code>{{ num1|string + ' ' + operator + ' '  + num2|string }} = {{ result }}</code></h2></p>
 </div>
 {% endblock %}
